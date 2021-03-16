@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import axios from "axios";
 @Component({
   selector: 'app-capacities',
   templateUrl: './capacities.component.html',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CapacitiesComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    
+  }
 
   ngOnInit() {
+
+    
   }
 
 }

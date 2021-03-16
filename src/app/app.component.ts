@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {cap} from "./services";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hi-app';
+
+  capacities = cap.data.capacities;
 }
