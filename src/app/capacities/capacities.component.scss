@@ -1,0 +1,52 @@
+.capacity {
+  width: 100%;
+  height: 88px;
+  border-top: 1px solid #e8eaeb;
+  border-bottom: 1px solid #e8eaeb;
+  border-right: 1px solid #e8eaeb;
+  border-left: 2px solid #cb9ade;
+  border-radius: 4px;
+
+  .col {
+    position: relative;
+    height: 100%;
+    display: inline-block;
+    border-bottom: 1px solid #e8eaeb;
+  }
+
+  .col1 {
+    width: 44%;
+
+    &:after {
+      content: "";
+      width: 1px;
+      height: 43%;
+      background-color: #e8eaeb;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      position: absolute;
+    }
+  }
+
+  .col2 {
+    width: 34%;
+
+    &:after {
+      content: "";
+      width: 1px;
+      height: 43%;
+      background-color: #e8eaeb;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      position: absolute;
+    }
+  }
+
+  .col3 {
+    width: 22%;
+  }
+}
