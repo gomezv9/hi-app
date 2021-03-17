@@ -6,7 +6,12 @@
   }"
 >
   <div class="col col1">
-    <img src="../../assets/image-hover.png" />
+    <img
+      class="iconName"
+      [alt]="capacity.name"
+      [src]="'../../assets/' + capacity.name + '.svg'"
+    />
+    <img class="info" src="../../assets/info.png" />
     <span>{{ capacity.name }}</span>
   </div>
   <div class="col col2">
@@ -18,12 +23,17 @@
       }"
     ></span>
     <span class="line"></span>
-    <span class="blueBar"></span>
+    <span
+      class="blueBar"
+      [ngStyle]="{
+        'width.px': (capacity.advanced.per * 90) / 100
+      }"
+    ></span>
     <span class="num">{{ capacity.advanced.per }}%</span>
   </div>
   <div class="col col3">
     <circle-progress
-      [percent]="75"
+      [percent]="capacity.succeeded.per"
       [radius]="22"
       [space]="-5"
       [showSubtitle]="false"
@@ -50,5 +60,7 @@
     >
     </circle-progress>
   </div>
-  <div class="col col4"></div>
+  <div class="col col4">
+    <img class="arrow" src="../../assets/downArrow.png" />
+  </div>
 </div>

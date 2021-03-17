@@ -4,6 +4,7 @@
   border-right: 1px solid #e8eaeb;
   display: flex;
   flex-direction: row;
+  background-color: #fcfbfb;
 
   &.firstEntry {
     border-top-right-radius: 4px;
@@ -39,26 +40,26 @@
     padding-left: 15px;
     border-left: 2px solid #cb9ade;
 
-    &:after {
-      content: "";
-      width: 1px;
-      height: 43%;
-      background-color: #e8eaeb;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      margin: auto;
-      position: absolute;
-    }
-
     span {
       color: #43474f;
       font-weight: 600;
       font-size: 14px;
     }
 
-    img {
-      display: none;
+    img.info {
+      width: 11px;
+      height: 11px;
+      position: relative;
+      top: 1px;
+      margin-right: 5px;
+    }
+
+    img.iconName {
+      width: 20px;
+      height: 20px;
+      position: relative;
+      top: 1px;
+      margin-right: 15px;
     }
   }
 
@@ -66,6 +67,18 @@
     width: 34%;
     padding-left: 15px;
     padding-right: 15px;
+
+    &:before {
+      content: "";
+      width: 1px;
+      height: 43%;
+      background-color: #e8eaeb;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      position: absolute;
+    }
 
     &:after {
       content: "";
@@ -118,9 +131,18 @@
 
   .col4 {
     width: 5%;
+
+    img.arrow {
+      width: 11px;
+      height: 11px;
+      position: relative;
+      top: 1px;
+      margin-right: 5px;
+    }
   }
 
   &:hover {
+    background-color: white;
     .col {
       border-top: 1px solid #e8eaeb;
       &.col1::before {
@@ -141,14 +163,24 @@
       border-top-left-radius: 4px;
       border-bottom-left-radius: 4px;
       border-left: 0px solid;
-    }
 
-    img {
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 88px;
-      display: block !important;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        background: repeating-linear-gradient(
+          180deg,
+          #cb9ade,
+          #cb9ade 5px,
+          #b15dcb 5px,
+          #b15dcb 10px
+        );
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
     }
   }
 }
