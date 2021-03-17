@@ -1,3 +1,12 @@
+import axios from "axios";
+
+export const getData = () =>{
+   return axios({
+        method: "GET",
+        url: "https://trailersyestrenos.co/hi/index.php",
+    });
+}
+
 export const cap = {
     "data": {
         "capacities": [

@@ -1,3 +1,8 @@
 <div class="container">
-  <app-capacities *ngFor="let ca of capacities"></app-capacities>
+  <app-capacities
+    *ngFor="let ca of capacities; let indexCap = index"
+    [indexSent]="indexCap"
+    [lastCap]="capacities.length"
+    [capacity]="ca"
+  ></app-capacities>
 </div>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {cap} from "./services";
+import {getData} from "./services";
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,12 @@ import {cap} from "./services";
 })
 export class AppComponent {
   title = 'hi-app';
+  indexSent = "";
+  capacities = [];
 
-  capacities = cap.data.capacities;
+  async ngOnInit() {
+    //console.log(await getData());
+    let {data} = await getData();
+    this.capacities = data.data.capacities;
+  }
 }
