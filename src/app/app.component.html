@@ -1,4 +1,14 @@
 <div class="container">
+  <p class="titleFilter">Filter</p>
+  <select [(ngModel)]="selectedQuantity" (change)="changeFilter()">
+    <option
+      *ngFor="let option of options"
+      [value]="option"
+      [disabled]="option === 'Select'"
+    >
+      {{ option }}
+    </option>
+  </select>
   <div class="mainHeader">
     <div class="col col1">
       <span class="per">%</span>
