@@ -1,4 +1,25 @@
 <div class="container">
+  <div class="mainHeader">
+    <div class="col col1">
+      <span class="per">%</span>
+    </div>
+    <div class="col col2">
+      <span class="title">PRE</span>
+      <span class="line"></span>
+      <div class="desc">
+        <span class="desc1">Emerging</span>
+        <span class="desc2">Advanced</span>
+      </div>
+    </div>
+    <div class="col col3">
+      <span class="title">POST</span>
+      <span class="line"></span>
+      <div class="desc">
+        <span class="desc1">Succeeded</span>
+      </div>
+    </div>
+    <div class="col col4"></div>
+  </div>
   <app-capacities
     *ngFor="let ca of capacities; let indexCap = index"
     [indexSent]="indexCap"
