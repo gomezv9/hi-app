@@ -21,7 +21,7 @@ export class AppComponent {
       console.log(this.selectedQuantity);
       if (this.selectedQuantity === "Succeded Value"){
         this.capacities.sort(function (a, b){
-            return a.succeeded.per - b.succeeded.per;
+            return b.succeeded.per - a.succeeded.per;
         })
       } 
       if (this.selectedQuantity === "Alphabetical"){
