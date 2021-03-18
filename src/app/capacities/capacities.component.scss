@@ -15,10 +15,15 @@
   }
 
   &.lastEntry {
-    border-bottom: 1px solid #e8eaeb;
     border-bottom-right-radius: 4px;
+    .col {
+      border-bottom: 1px solid #e8eaeb;
+    }
     .col1 {
       border-bottom-left-radius: 4px;
+    }
+    .col4 {
+      border-bottom-right-radius: 4px;
     }
   }
 
