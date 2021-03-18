@@ -14,6 +14,12 @@ export class AppComponent {
   async ngOnInit() {
     //console.log(await getData());
     let {data} = await getData();
-    this.capacities = data.data.capacities;
+    let dataTemp = data.data.capacities;
+    dataTemp.sort(function(x, y) {
+        return (x.overall === y.overall) ? 0 : x ? -1 : 1;
+    });
+    this.capacities = dataTemp.reverse();
+
+    
   }
 }
